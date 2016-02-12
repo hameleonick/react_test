@@ -1,2 +1,5 @@
 node_modules
 .idea
+src/client.min.js
+src/client.min.js.map
+tests/spec.min.js
