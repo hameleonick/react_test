@@ -27,10 +27,10 @@ export default class CommentBox extends React.Component {
 		}
 		else{
 			setTimeout(function(){
-				//this.props.data[0].text = "NEW TEXT NEW TEXT NEW TEXT NEW TEXT"
-				//var temp = this.props.data.slice(34)
-                //
-				//this.setState({data:temp})
+				this.props.data[0].text = "NEW TEXT NEW TEXT NEW TEXT NEW TEXT"
+				var temp = this.props.data.slice(34)
+
+				this.setState({data:temp})
 			}.bind(this),2000)
         //
 		}

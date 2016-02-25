@@ -11,6 +11,6 @@ export default class Comment extends React.Component {
 			    {this.props.children}
 			</div>
 
-			);
+		);
 	}
 } 

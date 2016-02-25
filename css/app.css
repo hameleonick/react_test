@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    clear: both;
+    *zoom: 1;
+}
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+
+.app-wrapper {
+    margin: 0 auto;
+    width: 1080px;
+    min-height: 100%;
+    background-color: #6699cc;
+}
