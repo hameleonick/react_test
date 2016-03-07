@@ -17,14 +17,19 @@ export default class ModeMain extends React.Component {
 
     }
 
-    handleClick(){
+    runGame(){
         ModeAction.runGame("GAME");
+    }
+
+    openOptions(){
+        ModeAction.openOptions("OPTIONS")
     }
 
     render(){
         return (
             <div class="mode-main">
-                <span onClick={this.handleClick}>Mode Main</span>
+                <div onClick={this.runGame}>Run Game</div>
+                <div onClick={this.openOptions}>Open Options</div>
             </div>
         )
     }

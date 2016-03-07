@@ -7,9 +7,26 @@ import AppConstants from "../constants/AppConstants";
 
 var ModeActions = {
     runGame: function(item){
-        AppDispatcher.handleViewAction({
-            actionType:AppConstants.OPEN_GAME_SCREEN,
-            item: item
+        AppDispatcher.dispatch({
+            type:AppConstants.OPEN_SCREEN,
+            data: item,
+            source: 'VIEW_ACTION'
+        })
+    },
+
+    openOptions: function(item){
+        AppDispatcher.dispatch({
+            type:AppConstants.OPEN_SCREEN,
+            data: item,
+            source: 'VIEW_ACTION'
+        })
+    },
+
+    openMode: function(item){
+        AppDispatcher.dispatch({
+            type:AppConstants.OPEN_SCREEN,
+            data: item,
+            source: 'VIEW_ACTION'
         })
     }
 }

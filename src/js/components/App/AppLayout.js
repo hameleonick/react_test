@@ -7,6 +7,7 @@ import AppAction from "../../actions/AppAction";
 import AppStore from "../../stores/AppStore";
 import ModeLayout from "../Mode/ModeLayout";
 import GameLayout from "../Game/GameLayout";
+import OptionsLayout from "../Options/OptionsLayout";
 
 
 function GetAppState(){
@@ -42,6 +43,7 @@ export default class AppLayout extends React.Component {
             <div class="app-main">
                 <ModeLayout currentPage={this.state.currentPage}/>
                 <GameLayout currentPage={this.state.currentPage} />
+                <OptionsLayout currentPage={this.state.currentPage} />
             </div>
         )
     }

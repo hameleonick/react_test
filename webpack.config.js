@@ -9,7 +9,7 @@ console.log(process.argv[3])
 if(process.argv[3]=="--buildtests"){
 
   dirname = "tests"
-  entry = "./CalcSpec.js";
+  entry = "./AllSpecs.js";
   outputPath = "/tests/";
   outputFilename = "spec.min.js";
 }

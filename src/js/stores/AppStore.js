@@ -12,13 +12,24 @@ import assign from "object-assign";
 var CHANGE_EVENT = 'change';
 
 var _gameData = {
-    currentPage: "MODE"
+    currentPage: "MODE",
+    options:{
+        sound: true,
+        languages:{
+            "en":true,
+            "ru":false
+        },
+        fastgame:false
+    }
 };
 
 function changePage(page){
     _gameData.currentPage = page;
 }
 
+function changeSound(flag){
+    _gameData.options.sound = flag;
+}
 
 var AppStore = assign({},EventEmitter.prototype, {
     emitChange: function() {
@@ -27,6 +38,10 @@ var AppStore = assign({},EventEmitter.prototype, {
 
     getCurrentPage: function(){
         return _gameData.currentPage;
+    },
+
+    getAllOptions: function(){
+
     },
 
     /**
@@ -46,12 +61,11 @@ var AppStore = assign({},EventEmitter.prototype, {
 });
 
 AppDispatcher.register(function(payload){
-    console.log("+++++++++++++++++++++")
-    console.log(payload);
-    var action = payload.action;
-    switch (action.actionType){
-        case AppConstants.OPEN_GAME_SCREEN:
-            changePage(action.item);
+    var data = payload.data;
+    var type = payload.type;
+    switch (type){
+        case AppConstants.OPEN_SCREEN:
+            changePage(data);
             AppStore.emitChange();
             break;
     }
